@@ -25,6 +25,7 @@ jobs:
       env:
         RAJK_KEY: ${{ secrets.RAJK_KEY }}
       run: |
+        ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
         python file_upload_to_rajkos_szerver.py
         git config --global user.email "gh-actions@github.com"
         git config --global user.name "github actions"
