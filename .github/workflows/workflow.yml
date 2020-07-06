@@ -1,11 +1,11 @@
-name: "Vig_Lentner"
+name: "Download and clean data"
 
 #on: push
 
 
 jobs:
   download-data:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: "Checkout repository"
       uses: actions/checkout@v1
