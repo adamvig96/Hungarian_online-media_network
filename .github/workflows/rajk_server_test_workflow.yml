@@ -1,0 +1,27 @@
+name: "Test upload to rajk server"
+
+on: push
+
+jobs:
+  upload-data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: "Checkout repository"
+      uses: actions/checkout@v1
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.7'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Upload testfile
+      env:
+        RAJK_KEY: ${{ secrets.RAJK_KEY }}
+      run: |
+        echo $RAJK_KEY > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        python file_upload_to_rajkos_szerver.py
+        git config --global user.email "gh-actions@github.com"
+        git config --global user.name "github actions"
