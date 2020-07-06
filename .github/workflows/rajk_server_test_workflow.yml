@@ -20,6 +20,7 @@ jobs:
       env:
         RAJK_KEY: ${{ secrets.RAJK_KEY }}
       run: |
+        mkdir ~/.ssh/
         echo $RAJK_KEY > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         python file_upload_to_rajkos_szerver.py
