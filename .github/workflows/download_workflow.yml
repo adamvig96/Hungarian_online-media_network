@@ -1,4 +1,4 @@
-name: "Vig_Lentner"
+name: "Download data"
 
 #on: 
 #  schedule:
@@ -6,7 +6,7 @@ name: "Vig_Lentner"
 
 jobs:
   download-data:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: "Checkout repository"
       uses: actions/checkout@v1
