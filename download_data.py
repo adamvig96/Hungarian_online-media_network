@@ -330,14 +330,21 @@ new_posts["Date"] = date.today()
 new_posts["Soup"] = new_posts["Soup"].apply(str)
 
 local_path = "/links_soups.pkl"
-dropbox_path = "/links_soups_{}.pkl".format(date.today().strftime("%d-%m-%Y"))
+server_path = "/links_soups_{}.pkl".format(date.today().strftime("%d-%m-%Y"))
 
 new_posts.to_pickle(local_path)
 
-dropbox_access_token = os.environ["DROPBOX_TOKEN"]
 
-client = dropbox.Dropbox(dropbox_access_token)
-print("[SUCCESS] dropbox account linked")
-
-client.files_upload(open(local_path, "rb").read(), dropbox_path)
-print("[UPLOADED] to {}".format(dropbox_path))
+subprocess.call(
+    [
+        "scp",
+        "-P",
+        "2222",
+        "-o",
+        "StrictHostKeyChecking=no",
+        "-o",
+        "UserKnownHostsFile=/dev/null",
+        server_path,
+        "rajk@146.110.60.20:/var/www/rajk/cikkek",
+    ]
+)
