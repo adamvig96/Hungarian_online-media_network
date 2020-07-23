@@ -4,6 +4,7 @@ import os
 import dotenv
 import string
 import requests
+import subprocess
 import dropbox
 
 from bs4 import BeautifulSoup
@@ -329,7 +330,7 @@ new_posts["Date"] = date.today()
 
 new_posts["Soup"] = new_posts["Soup"].apply(str)
 
-data_file_path = "/links_soups_{}.pkl".format(date.today().strftime("%d-%m-%Y"))
+data_file_path = "links_soups_{}.pkl".format(date.today().strftime("%d-%m-%Y"))
 
 new_posts.to_pickle(data_file_path)
 
