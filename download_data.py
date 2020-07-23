@@ -71,6 +71,7 @@ soups = get_soups(mandiner_links)
 mandiner_out = pd.DataFrame(list(zip(mandiner_links, soups)), columns=["Link", "Soup"])
 mandiner_out["Page"] = "Mandiner"
 
+print("Got Mandiner")
 
 # 444
 home = "444.hu"
@@ -81,6 +82,7 @@ soups = get_soups(negy_links)
 negy_out = pd.DataFrame(list(zip(negy_links, soups)), columns=["Link", "Soup"])
 negy_out["Page"] = "444"
 
+print("Got 444")
 
 # HVg
 home = "hvg.hu"
@@ -107,6 +109,7 @@ soups = get_soups(hvg_links)
 hvg_out = pd.DataFrame(list(zip(hvg_links, soups)), columns=["Link", "Soup"])
 hvg_out["Page"] = "HVG"
 
+print("Got hvg")
 
 # Origo
 home = "www.origo.hu/index.html"
@@ -128,6 +131,7 @@ soups = get_soups(origo_links)
 origo_out = pd.DataFrame(list(zip(origo_links, soups)), columns=["Link", "Soup"])
 origo_out["Page"] = "Origo"
 
+print("Got origo")
 
 # 24.hu
 home = "24.hu"
@@ -145,6 +149,7 @@ soups = get_soups(huszon_links)
 huszon_out = pd.DataFrame(list(zip(huszon_links, soups)), columns=["Link", "Soup"])
 huszon_out["Page"] = "24.hu"
 
+print("Got 24")
 
 # Ripost
 page = requests.get("https://ripost.hu/")
@@ -168,6 +173,7 @@ soups = get_soups(ripost_links)
 ripost_out = pd.DataFrame(list(zip(ripost_links, soups)), columns=["Link", "Soup"])
 ripost_out["Page"] = "Ripost"
 
+print("Got ripost")
 
 # 888.hu
 page = requests.get("https://888.hu/")
@@ -192,6 +198,7 @@ soups = get_soups(nyolc_links)
 nyolc_out = pd.DataFrame(list(zip(nyolc_links, soups)), columns=["Link", "Soup"])
 nyolc_out["Page"] = "888"
 
+print("Got 888")
 
 # VG
 page = requests.get("https://vg.hu/")
@@ -215,6 +222,7 @@ soups = get_soups(vg_links)
 vg_out = pd.DataFrame(list(zip(vg_links, soups)), columns=["Link", "Soup"])
 vg_out["Page"] = "Világgazdaság"
 
+print("Got VG")
 
 # Figyelő
 
@@ -242,6 +250,7 @@ soups = get_soups(figyelo_links)
 figyelo_out = pd.DataFrame(list(zip(figyelo_links, soups)), columns=["Link", "Soup"])
 figyelo_out["Page"] = "Figyelő"
 
+print("Got figyelo")
 
 # Alfahír
 page = requests.get("https://alfahir.hu/")
@@ -266,6 +275,7 @@ soups = get_soups(alfahir_links)
 alfahir_out = pd.DataFrame(list(zip(alfahir_links, soups)), columns=["Link", "Soup"])
 alfahir_out["Page"] = "Alfahír"
 
+print("Got alfahir")
 
 # Napi.hu
 page = requests.get("https://napi.hu/")
@@ -293,7 +303,7 @@ soups = get_soups(napi_links)
 napi_out = pd.DataFrame(list(zip(napi_links, soups)), columns=["Link", "Soup"])
 napi_out["Page"] = "Napi.hu"
 
-
+print("Got napi")
 # Index
 home = "index.hu"
 day = date.today().strftime("%%2F%Y%%2F%m%%2F%d")
@@ -309,6 +319,7 @@ soups = get_soups(index_links)
 index_out = pd.DataFrame(list(zip(index_links, soups)), columns=["Link", "Soup"])
 index_out["Page"] = "Index"
 
+print("Got index")
 
 new_posts = pd.concat(
     [
@@ -333,6 +344,7 @@ new_posts["Soup"] = new_posts["Soup"].apply(str)
 data_file_path = "links_soups_{}.pkl".format(date.today().strftime("%d-%m-%Y"))
 
 new_posts.to_pickle(data_file_path)
+print("wrote file to local")
 
 
 subprocess.call(
