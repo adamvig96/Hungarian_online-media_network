@@ -329,10 +329,9 @@ new_posts["Date"] = date.today()
 
 new_posts["Soup"] = new_posts["Soup"].apply(str)
 
-local_path = "/links_soups.pkl"
-server_path = "/links_soups_{}.pkl".format(date.today().strftime("%d-%m-%Y"))
+data_file_path = "/links_soups_{}.pkl".format(date.today().strftime("%d-%m-%Y"))
 
-new_posts.to_pickle(local_path)
+new_posts.to_pickle(data_file_path)
 
 
 subprocess.call(
@@ -344,7 +343,7 @@ subprocess.call(
         "StrictHostKeyChecking=no",
         "-o",
         "UserKnownHostsFile=/dev/null",
-        server_path,
+        data_file_path,
         "rajk@146.110.60.20:/var/www/rajk/cikkek",
     ]
 )
