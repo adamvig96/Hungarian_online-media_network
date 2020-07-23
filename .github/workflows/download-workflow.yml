@@ -27,6 +27,6 @@ jobs:
       env:
         RAJK_KEY: ${{ secrets.RAJK_KEY }}
       run: |
-        python download_data_try.py
+        python download_data.py
         git config --global user.email "gh-actions@github.com"
         git config --global user.name "github actions"
