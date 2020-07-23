@@ -1,6 +1,8 @@
 name: "Clean data"
 
-#on: push
+#on:
+#  schedule:
+#    - cron:  '0 15 * * *'
 
 
 jobs:
@@ -24,4 +26,3 @@ jobs:
         python data_processing.py
         git config --global user.email "gh-actions@github.com"
         git config --global user.name "github actions"
-    
