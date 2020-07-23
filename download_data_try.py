@@ -64,7 +64,7 @@ index_out["Page"] = "Index"
 
 index_out["Date"] = date.today()
 
-index_out["Soup"] = new_posts["Soup"].apply(str)
+index_out["Soup"] = index_out["Soup"].apply(str)
 
 data_file_path = "/links_soups_{}.pkl".format(date.today().strftime("%d-%m-%Y"))
 
