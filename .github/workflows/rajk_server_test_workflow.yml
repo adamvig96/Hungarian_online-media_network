@@ -1,6 +1,6 @@
 name: "Test upload to rajk server"
 
-#on: push
+on: push
 
 jobs:
   upload-data:

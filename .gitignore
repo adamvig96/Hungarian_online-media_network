@@ -1,0 +1,6 @@
+# Vim
+*~
+*.sw[p_]
+
+# key
+.rajk_key

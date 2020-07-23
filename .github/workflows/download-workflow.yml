@@ -5,7 +5,7 @@ on: push
 #    - cron:  '0 15 * * *'
 
 jobs:
-  upload-data:
+  download-data:
     runs-on: ubuntu-latest
     steps:
     - name: "Checkout repository"
@@ -27,6 +27,6 @@ jobs:
       env:
         RAJK_KEY: ${{ secrets.RAJK_KEY }}
       run: |
-        python download_data.py
+        python download_data_try.py
         git config --global user.email "gh-actions@github.com"
         git config --global user.name "github actions"
