@@ -37,7 +37,7 @@ def get_links(home_string, day_string):
     return links
 
 
-def get_soups(page_links, sleep_time=3):
+def get_soups(page_links, sleep_time=12):
     soups = []
     for page_link in page_links:
         page = requests.get(page_link)
