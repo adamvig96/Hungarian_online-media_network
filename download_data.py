@@ -76,6 +76,7 @@ try:
 
     print("Got Mandiner")
 except:
+    mandiner_out = None
     print("Mandiner failed")
 
 # 444
@@ -90,6 +91,7 @@ try:
 
     print("Got 444")
 except:
+    negy_out=None
     print("444 failed")
 
 # HVg
@@ -119,6 +121,7 @@ try:
 
     print("Got hvg")
 except:
+    hvg_out=None
     print("hvg failed")
 
 # Origo
@@ -143,6 +146,7 @@ try:
 
     print("Got origo")
 except:
+    origo_out=None
     print("origo failed")
 
 # 24.hu
@@ -164,6 +168,7 @@ try:
 
     print("Got 24")
 except:
+    huszon_out=None
     print("24 failed")
 
 # Ripost
@@ -188,6 +193,7 @@ try:
 
     print("Got ripost")
 except:
+    ripost_out=None
     print("ripost failed")
 
 # 888.hu
@@ -213,6 +219,7 @@ try:
 
     print("Got 888")
 except:
+    nyolc_out=None
     print("888 failed")
 
 # VG
@@ -237,6 +244,7 @@ try:
 
     print("Got VG")
 except:
+    vg_out=None
     ("VG failed")
 
 # Figyelő
@@ -266,6 +274,7 @@ try:
 
     print("Got figyelo")
 except:
+   figyelo_out=None
     print("figyelo failed")
 
 # Alfahír
@@ -296,6 +305,7 @@ try:
 
     print("Got alfahir")
 except:
+    alfahir_out=None
     print("alfahir failed")
 
 # Napi.hu
@@ -323,6 +333,7 @@ try:
 
     print("Got napi")
 except:
+    napi_out=None
     print("napi failed")
 
 # Index
@@ -343,6 +354,7 @@ try:
 
     print("Got index")
 except:
+    index_out=None
     print("index failed")
 
 # Nepszava
@@ -372,6 +384,7 @@ try:
     )
     nepszava_out["Page"] = "Népszava"
 except:
+    nepszava_out=None
     print("nepszava failed")
 
 # pestisracok
@@ -414,6 +427,7 @@ try:
     )
     pestisracok_out["Page"] = "Pesti Srácok"
 except:
+    pestisracok_out=None
     print("PSrácok failed")
 
 # femina
@@ -442,6 +456,7 @@ try:
     femina_out = pd.DataFrame(list(zip(femina_links, soups)), columns=["Link", "Soup"])
     femina_out["Page"] = "Femina"
 except:
+    femina_out=None
     print("femina failed")
 
 # life.hu
@@ -470,6 +485,7 @@ try:
     life_out = pd.DataFrame(list(zip(life_links, soups)), columns=["Link", "Soup"])
     life_out["Page"] = "Life.hu"
 except:
+    life_out=None
     print("life.hu failed")
 
 # cosmopolitan
@@ -497,6 +513,7 @@ try:
     cosmo_out = pd.DataFrame(list(zip(cosmo_links, soups)), columns=["Link", "Soup"])
     cosmo_out["Page"] = "Cosmopolitan"
 except:
+    cosmo_out=None
     print("Cosmopolitan failed")
 
 # nlc
@@ -524,6 +541,7 @@ try:
     nlc_out = pd.DataFrame(list(zip(nlc_links, soups)), columns=["Link", "Soup"])
     nlc_out["Page"] = "nlc.hu"
 except:
+    nlc_out=None
     print("nlc failed")
 
 try:
@@ -550,6 +568,7 @@ try:
     atv_out = pd.DataFrame(list(zip(atv_links, soups)), columns=["Link", "Soup"])
     atv_out["Page"] = "atv.hu"
 except:
+    atv_out=None
     print("atv failed")
 
 try:
@@ -577,6 +596,7 @@ try:
     ora_out = pd.DataFrame(list(zip(ora_links, soups)), columns=["Link", "Soup"])
     ora_out["Page"] = "168óra"
 except:
+    ora_out=None
     print("168ora failed")
 
 
@@ -604,6 +624,7 @@ try:
     qubit_out = pd.DataFrame(list(zip(qubit_links, soups)), columns=["Link", "Soup"])
     qubit_out["Page"] = "Qubit"
 except:
+    qubit_out=None
     print("qubit failed")
 
 
@@ -633,6 +654,7 @@ try:
     g7_out = pd.DataFrame(list(zip(g7_links, soups)), columns=["Link", "Soup"])
     g7_out["Page"] = "G7"
 except:
+    g7_out=None
     print("g7 failed")
 
 try:
@@ -667,6 +689,7 @@ try:
     portfolio_out["Page"] = "Portfolio"
 
 except:
+    portfolio_out=None
     print("portfolio failed")
 
 
@@ -698,6 +721,7 @@ try:
     )
     direkt36_out["Page"] = "direkt36"
 except:
+    direkt36_out=None
     print("direkt36 failed")
 
 try:
@@ -729,6 +753,7 @@ try:
     kisalfold_out["Page"] = "kisalfold.hu"
 
 except:
+    kisalfold_out=None
     print("kisalfold failed")
 
 
