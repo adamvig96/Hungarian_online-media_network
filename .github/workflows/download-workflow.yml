@@ -1,9 +1,8 @@
 name: "Download data"
 
-on:
-  push
-  schedule:
-    - cron:  '0 13 * * *'
+on: push
+  #schedule:
+  #  - cron:  '0 13 * * *'
 
 jobs:
   download-data:
