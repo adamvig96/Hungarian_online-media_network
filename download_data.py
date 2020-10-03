@@ -79,6 +79,34 @@ except:
     mandiner_out = None
     print("Mandiner failed")
 
+# telex
+try:
+    home = "telex.hu"
+    day = date.today().strftime("%Y%m%d")
+
+    page = requests.get("https://" + home + "/")
+    soup = BeautifulSoup(page.content, "html.parser")
+
+    l = []
+    for item in soup.find_all("a"):
+        if type(item.get("href")) == str:
+            l.append(item.get("href"))
+    links = list(set(l))
+
+    telex_links = []
+    for link in links:
+        if link.split("/")[-2].isdigit():
+            telex_links.append("https://telex.hu" + link)
+
+    soups = get_soups(telex_links)
+
+    telex_out = pd.DataFrame(list(zip(telex_links, soups)), columns=["Link", "Soup"])
+    telex_out["Page"] = "Telex"
+    print("got telex")
+except:
+    telex_out = None
+    print("telex failed")
+
 # 444
 try:
     home = "444.hu"
@@ -760,6 +788,7 @@ except:
 new_posts = pd.concat(
     [
         negy_out,
+        telex_out,
         hvg_out,
         origo_out,
         huszon_out,
