@@ -3,10 +3,12 @@
 *.sw[p_]
 
 # key
-rajk_key
-dropbox_kex
-media.html
 
-media_project_rajk.zip
+keys
+.ipynb_checkpoints
 
-include_more_sites.ipynb
+data
+figures
+image_rekognizion
+koko_code
+naplok
