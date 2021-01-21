@@ -3,8 +3,6 @@ import pandas as pd
 import json
 from bs4 import BeautifulSoup
 from tqdm import tqdm
-import seaborn as sns
-import matplotlib.pyplot as plt
 import pickle5 as pickle
 import time
 from datetime import datetime as dt

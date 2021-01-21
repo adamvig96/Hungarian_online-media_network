@@ -2,12 +2,11 @@ import requests
 import pandas as pd
 import json
 from bs4 import BeautifulSoup
-#from tqdm.notebook import tqdm
-import seaborn as sns
-import matplotlib.pyplot as plt
+from tqdm import tqdm
 import pickle5 as pickle
 import time
 from datetime import datetime as dt
+
 
 def get_soups(df, sleep_time=3):
     soups = []
@@ -18,6 +17,7 @@ def get_soups(df, sleep_time=3):
         time.sleep(sleep_time)
 
     return df
+
 
 df = pd.read_pickle("data/index_url.pkl")
 
