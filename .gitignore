@@ -2,14 +2,25 @@
 *~
 *.sw[p_]
 
-# key
 
 keys
 .ipynb_checkpoints
+.pdf
+.Rhistory
 
-media_data
+media_data/clean_text
+media_data/covid data
+media_data/html_pages
+media_data/links_to_sites
+media_data/analysis_covid/data
+
+analysis_covid.Rproj
+
+
 figures
 image_rekognizion
 koko_code
 naplok
+text_speeches.pkl
 .Rproj.user
+
