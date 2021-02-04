@@ -8,11 +8,8 @@ keys
 .pdf
 .Rhistory
 
-media_data/clean_text
-media_data/covid data
-media_data/html_pages
-media_data/links_to_sites
-media_data/analysis_covid/data
+media_data
+analysis_covid
 
 analysis_covid.Rproj
 
